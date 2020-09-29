@@ -7,15 +7,14 @@ Since I use an external stemmer, you must install "stemming" module for python u
 
 ## Step 2 : Parsing the Data
 
-To parse the data, run the file "WikipediaIndexer.py"
-To run the file, the syntax is "python WikipediaIndexer.py <path-to-dump-file>"
+To parse the data, run the file "index.py"
+To run the file, the syntax is "python3 index.py <path_to_wiki_dump> <path_to_invertedindex_output> <invertedindex_stat.txt>"
 It'll parse the whole dump and file the index files in the 'indexFiles' directory.
 It also creates the document to title mapping file in the current directory named 'docTitleMap.txt' which will be used by the search module later.
 (NOTE : As of current code, it pushes the index to disk for every 4000 documents encountered. This can be changed by changing the value of 'pushLimit' variable in the code)
 
 ## Step 3 : Merging the Indexes and Creating Secondary Indexes
 
-To merge the individual index files and create the secondary index, run the file "IndexMerger.py"
 There isn't any need for command line arguments. It takes the index files from 'indexFiles' directory and populates the 'finalIndex' directory with indexes of given chunk size and creates a secondary index named 'secondaryIndex.txt' in the same folder.
 (NOTE : As of the current code, the chunk size is kept 150000. This can be changed by changing the value of 'chunkSize' variable in the code)
 
