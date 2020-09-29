@@ -8,8 +8,7 @@ Since I use an external stemmer, you must install "stemming" module for python u
 ## Step 2 : Parsing the Data
 
 To parse the data, run the file "index.py"
-To run the file, the syntax is "python3 index.py <path_to_wiki_dump> <path_to_invertedindex_output> <invertedindex_stat.txt>"
-It'll parse the whole dump and file the index files in the 'indexFiles' directory.
+To run the file, the syntax is "python3 index.py <path_to_wiki_dump> <path_to_invertedindex_output> <invertedindex_stat.txt>". It'll parse the whole dump and file the index files in the 'indexFiles' directory.
 It also creates the document to title mapping file in the current directory named 'docTitleMap.txt' which will be used by the search module later.
 (NOTE : As of current code, it pushes the index to disk for every 4000 documents encountered. This can be changed by changing the value of 'pushLimit' variable in the code)
 
